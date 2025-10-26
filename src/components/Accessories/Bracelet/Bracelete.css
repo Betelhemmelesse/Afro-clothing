@@ -110,7 +110,12 @@ div {
   color: black;
   transform: scale(1.05);
 }
-
+.bracelets-buttons a {
+  text-decoration: none; /* Removes the underline from the link */
+}
+.bracelets-buttons .bracelets-button {
+  text-decoration: none;
+}
 /*  */
 /* Parent grid: Displays 3 ProductCards per row */
 .card-container {

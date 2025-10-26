@@ -1,6 +1,7 @@
 import React from "react";
 import "./Earrings.css";
 import ProductDetail from "../../Reusable/ProductDetail/ProductDetail";
+import { Link } from "react-router-dom";
 
 function Earrings({
   products,
@@ -22,8 +23,12 @@ function Earrings({
           whisper of African heritage.
         </p>
         <div className="earrings-buttons">
-          <div className="earrings-button">SHOP NOW</div>
-          <div className="earrings-button">ORDER WHOLESALE</div>
+          <Link to="/shoppingcart">
+            <div className="earrings-button">SHOP NOW</div>
+          </Link>
+          <Link to="/shoppingcart">
+            <div className="earrings-button">ORDER WHOLESALE</div>
+          </Link>
         </div>
       </div>
       <div className="card-container">

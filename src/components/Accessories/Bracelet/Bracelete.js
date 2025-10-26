@@ -1,6 +1,7 @@
 import React from "react";
 import "./Bracelete.css";
 import ProductDetail from "../../Reusable/ProductDetail/ProductDetail.js";
+import { Link } from "react-router-dom";
 
 function Bracelete({
   products,
@@ -22,8 +23,12 @@ function Bracelete({
           African story.
         </p>
         <div className="bracelets-buttons">
-          <div className="bracelets-button">SHOP NOW</div>
-          <div className="bracelets-button">ORDER WHOLESALE</div>
+          <Link to="/shoppingcart">
+            <div className="bracelets-button">SHOP NOW</div>
+          </Link>
+          <Link to="/shoppingcart">
+            <div className="bracelets-button">ORDER WHOLESALE</div>
+          </Link>
         </div>
       </div>
       <div className="card-container">

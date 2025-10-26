@@ -1,6 +1,7 @@
 import React from "react";
 import "./Necklaces.css";
 import ProductDetail from "../../Reusable/ProductDetail/ProductDetail";
+import { Link } from "react-router-dom";
 
 function Necklaces({
   products,
@@ -22,8 +23,12 @@ function Necklaces({
           bold design
         </p>
         <div className="necklaces-buttons">
-          <div className="necklaces-button">SHOP NOW</div>
-          <div className="necklaces-button">ORDER WHOLESALE</div>
+          <Link to="/shoppingcart">
+            <div className="necklaces-button">SHOP NOW</div>
+          </Link>
+          <Link to="/shoppingcart">
+            <div className="necklaces-button">ORDER WHOLESALE</div>
+          </Link>
         </div>
       </div>
       <div className="card-container">
