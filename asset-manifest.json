@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Afro-clothing/static/css/main.07df2f81.css",
-    "main.js": "/Afro-clothing/static/js/main.d5bab700.js",
+    "main.css": "/Afro-clothing/static/css/main.171961aa.css",
+    "main.js": "/Afro-clothing/static/js/main.a47f3f07.js",
     "static/media/Gemini_Generated_Image_xxk0p4xxk0p4xxk0.png": "/Afro-clothing/static/media/Gemini_Generated_Image_xxk0p4xxk0p4xxk0.54126fef6e13fc27eea3.png",
     "static/media/child-back.png": "/Afro-clothing/static/media/child-back.039063377e9158c9cae7.png",
     "static/media/Gemini_Generated_Image_jmlb5tjmlb5tjmlb.png": "/Afro-clothing/static/media/Gemini_Generated_Image_jmlb5tjmlb5tjmlb.6c9342904bf03b7711f9.png",
@@ -188,11 +188,11 @@
     "static/media/e855c6ca-457b-435d-b4af-f01e97d7d6de.jpg": "/Afro-clothing/static/media/e855c6ca-457b-435d-b4af-f01e97d7d6de.4b8aaf8ff5cabe774cb8.jpg",
     "static/media/logo2.png": "/Afro-clothing/static/media/logo2.d95636c1314882c5aa98.png",
     "index.html": "/Afro-clothing/index.html",
-    "main.07df2f81.css.map": "/Afro-clothing/static/css/main.07df2f81.css.map",
-    "main.d5bab700.js.map": "/Afro-clothing/static/js/main.d5bab700.js.map"
+    "main.171961aa.css.map": "/Afro-clothing/static/css/main.171961aa.css.map",
+    "main.a47f3f07.js.map": "/Afro-clothing/static/js/main.a47f3f07.js.map"
   },
   "entrypoints": [
-    "static/css/main.07df2f81.css",
-    "static/js/main.d5bab700.js"
+    "static/css/main.171961aa.css",
+    "static/js/main.a47f3f07.js"
   ]
 }
