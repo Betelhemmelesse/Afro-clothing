@@ -1,0 +1,48 @@
+.mend1-container {
+  background: #ffffff;
+  width: 100%;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.detail-description h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Exactly 3 columns for 3 ProductCards per row */
+  gap: 25px; /* Space between ProductCards */
+  padding: 40px 20px;
+  max-width: 1200px; /* Fits 3 ProductCards + gaps (~350px each) */
+  /* margin: 0 auto; */
+  justify-items: center;
+  align-items: start;
+}
+
+/* Responsive: Adjust columns based on screen size */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 ProductCards per row on tablet */
+    gap: 20px;
+    padding: 30px 15px;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 ProductCard per row on mobile */
+    gap: 15px;
+    padding: 20px 10px;
+    max-width: none;
+  }
+}

@@ -1,0 +1,428 @@
+/* Footer.css */
+
+/* Ensure Outfit font is loaded (add to public/index.html if needed) */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+.footer-container {
+  background-color: #1a1a1a; /* Blackish background to match header */
+  color: white;
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Overall vertical stack: top > center > bottom */
+  gap: 0; /* No gap between sections; adjust if needed */
+}
+
+.footer-top {
+  display: flex; /* Row layout for the four .img-des */
+  justify-content: space-around; /* Evenly space the child divs */
+  align-items: center;
+  padding: 2rem;
+  background-color: #222; /* Slightly lighter than main for distinction */
+  gap: 1rem; /* Small gap between .img-des if space-around leaves room */
+}
+
+.img-des {
+  display: flex; /* Row: img on left, text on right */
+  align-items: center; /* Vertical center alignment */
+  gap: 1rem; /* Space between img and text */
+  flex: 1; /* Equal width for each .img-des */
+  max-width: 250px; /* Prevent stretching too wide */
+  text-align: left; /* Align text to left */
+}
+
+.img-des img {
+  width: 60px; /* Fixed size for icons; adjust based on your images */
+  height: auto;
+  flex-shrink: 0; /* Prevent img from shrinking */
+}
+
+.img-des h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+}
+
+.img-des p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc; /* Lighter gray for secondary text */
+  font-weight: 400;
+}
+
+/* Right side of .img-des: Stack h2 and p vertically (they are siblings after img) */
+.img-des > *:not(img):first-of-type {
+  /* Targets h2 as first non-img */
+  margin: 0 0 0.25rem 0; /* Small top margin if needed */
+}
+
+.img-des > *:not(img):last-of-type {
+  /* Targets p */
+  margin: 0;
+}
+
+.footer-center {
+  display: flex; /* Row: left on left, right on right */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 4rem; /* Space between left and right */
+}
+
+.footer-left {
+  flex: 1; /* Takes available space on left */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-left img {
+  width: 120px; /* Logo size; adjust as needed */
+  height: auto;
+}
+
+.footer-left p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd; /* Slightly lighter for readability */
+  margin: 0;
+}
+
+.footer-left-li {
+  list-style: none; /* No bullets */
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column; /* Stack list items vertically */
+  gap: 0.75rem;
+}
+
+.footer-left-li li {
+  display: flex; /* Horizontal: img and p side by side */
+  align-items: center; /* Vertical center */
+  gap: 0.75rem; /* Space between img and p */
+  font-size: 0.9rem;
+}
+
+.footer-left-li img {
+  width: 20px; /* Small icons for contact info */
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.footer-left-li p {
+  margin: 0;
+  color: #ccc;
+}
+
+.footer-right {
+  display: flex; /* Row for the four .ul-container */
+  justify-content: flex-end; /* Push to right */
+  gap: 3rem; /* Space between ul-containers */
+  flex: 1;
+}
+
+.ul-container {
+  min-width: 150px; /* Prevent squishing */
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-container h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid #333; /* Subtle underline */
+  padding-bottom: 0.5rem;
+}
+
+.ul-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ul-container li {
+  font-size: 0.9rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.ul-container li:hover {
+  color: white; /* Hover effect for links */
+}
+
+.footer-bottom {
+  display: flex; /* Row: forms side by side */
+  justify-content: space-around; /* Even spacing */
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #111; /* Darker bottom section */
+  gap: 2rem; /* Space between forms */
+  border-top: 1px solid #333; /* Separator from center */
+}
+
+.form-container {
+  flex: 1; /* Equal width for each form */
+  max-width: 300px; /* Compact width */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-container h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #444; /* Dark border for dark theme */
+  border-radius: 4px;
+  background-color: #2a2a2a; /* Dark input bg */
+  color: white;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ccc; /* Lighter on focus */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.submit-button {
+  padding: 0.75rem;
+  background-color: #333; /* Dark button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(4, 59, 4);
+}
+
+.submit-button:hover {
+  background-color: rgb(6, 93, 6); /* Lighter on hover */
+}
+
+/* added latter  */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  /* Add any additional footer-bottom styles if needed */
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.toggle-button:hover {
+  background-color: #555;
+}
+
+.toggle-button.active {
+  background-color: rgb(4, 59, 4);
+}
+
+.form-container {
+  flex: 1; /* Equal width for each form */
+  max-width: 300px; /* Compact width */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-container h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #444; /* Dark border for dark theme */
+  border-radius: 4px;
+  background-color: #2a2a2a; /* Dark input bg */
+  color: white;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ccc; /* Lighter on focus */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.submit-button {
+  padding: 0.75rem;
+  background-color: #333; /* Dark button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(4, 59, 4);
+}
+
+.submit-button:hover {
+  background-color: rgb(6, 93, 6); /* Lighter on hover */
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    /* Stack .img-des vertically on mobile */
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .img-des {
+    max-width: none; /* Full width on mobile */
+    justify-content: center; /* Center content */
+    text-align: center;
+  }
+
+  .footer-center {
+    flex-direction: column; /* Stack left and right vertically */
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .footer-right {
+    justify-content: center; /* Center the ul-containers */
+    gap: 2rem;
+    flex-direction: column; /* Stack ul-containers vertically on small screens */
+  }
+
+  .ul-container {
+    min-width: auto;
+    align-items: center;
+  }
+
+  .footer-left-li li {
+    justify-content: center; /* Center on mobile */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack forms vertically on mobile */
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .form-container {
+    max-width: none; /* Full width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-top {
+    padding: 0.5rem;
+    justify-content: left;
+  }
+
+  .img-des img {
+    width: 50px;
+  }
+
+  .footer-center {
+    padding: 0.5rem;
+  }
+
+  .footer-right {
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 0.5rem;
+  }
+
+  .form-group input,
+  .submit-button {
+    padding: 0.625rem;
+    font-size: 0.85rem;
+  }
+}

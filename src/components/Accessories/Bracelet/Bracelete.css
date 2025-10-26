@@ -1,0 +1,150 @@
+.bracelets-container {
+  background: #f0f0f0;
+  width: 100%;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+
+/* home-top styling */
+.bracelets-top {
+  position: relative;
+  height: 100vh; /* Full viewport height for hero section; adjust as needed */
+  background-image: url("../../../images/accessories/braclets/bg22.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Prevent overflow on hover translation */
+}
+
+.bracelets-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Optional overlay for better text readability */
+  z-index: 1;
+}
+
+.bracelets-top h1,
+.bracelets-top p,
+.bracelets-top .bracelets-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+.bracelets-top h1 {
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional for readability */
+}
+
+.bracelets-top p {
+  font-size: 1.2rem;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Hover effect for background translation (subtle shift only) */
+.bracelets-top:hover {
+  background-position: center 40%; /* Subtle translation downward on hover; reduced from 20% for less "zoom" feel */
+  transition: background-position 0.3s ease;
+}
+
+.bracelets-buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bracelets-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bracelets-button:first-child {
+  background-color: white;
+  color: black; /* Assuming black text on white bg for contrast */
+}
+
+.bracelets-button:first-child:hover {
+  background-color: transparent;
+  color: white; /* Black text as requested */
+  border: 2px solid white;
+  transform: scale(1.05);
+  /* Slight scale on hover */
+}
+
+.bracelets-button:last-child {
+  background-color: transparent;
+  color: white; /* Black text as requested */
+  border: 2px solid white; /* White border */
+  /* Removed opacity: 0; now it's visible but transparent background */
+}
+
+.bracelets-button:last-child:hover {
+  background-color: white; /* White button on hover */
+  color: black;
+  transform: scale(1.05);
+}
+
+/*  */
+/* Parent grid: Displays 3 ProductCards per row */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Exactly 3 columns for 3 ProductCards per row */
+  gap: 25px; /* Space between ProductCards */
+  padding: 40px 20px;
+  max-width: 1200px; /* Fits 3 ProductCards + gaps (~350px each) */
+  margin: 0 auto;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Responsive: Adjust columns based on screen size */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 ProductCards per row on tablet */
+    gap: 20px;
+    padding: 30px 15px;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 ProductCard per row on mobile */
+    gap: 15px;
+    padding: 20px 10px;
+    max-width: none;
+  }
+}
